@@ -1,0 +1,13 @@
+# TODO: reemplazar en los properties de conf el OPENSHIFT_DATA_DIR y OPENSHIFT_NEO4J_INTERNAL_IP por los valores
+#!/bin/bash -e
+
+set -u
+
+for dir in logs tmp pid cache dbs env; do
+	mkdir -p $dir
+done
+
+cd $OPENSHIFT_PRIMARY_CARTRIDGE_DIR/versions/2.1/neo4j-2.1/conf
+grep -rl 'OPENSHIFT_NEO4J_DB_HOST' ./ | xargs sed -i "s/OPENSHIFT_NEO4J_DB_HOST/$OPENSHIFT_NEO4J_DB_HOST/g"
+grep -rl 'OPENSHIFT_NEO4J_DB_PORT' ./ | xargs sed -i "s/OPENSHIFT_NEO4J_DB_PORT/$OPENSHIFT_NEO4J_DB_PORT/g"
+grep -rl 'OPENSHIFT_DATA_DIR' ./ | xargs sed -i "s/OPENSHIFT_DATA_DIR/$OPENSHIFT_DATA_DIR/g"
