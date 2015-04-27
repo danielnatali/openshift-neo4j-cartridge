@@ -6,9 +6,9 @@ Version: '2.1'
 License: GNU GENERAL PUBLIC LICENSE
 License-Url: 
 Vendor: Acciona IT
-Cartridge-Version: 0.0.1
+Cartridge-Version: 0.0.3
 Cartridge-Vendor: neo4j
-Source-Url: https://extranet.acciona-it.com/cart/openshift-origin-cartridge-neo4j-v21.zip
+Source-Url: https://github.com/danielnatali/openshift-neo4j-cartridge.git
 Categories:
   - service
 Website: http://www.neo4j.org/
