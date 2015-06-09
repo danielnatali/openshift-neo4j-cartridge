@@ -12,5 +12,16 @@ Neo4j 2 version provides the following enhancements:
 * cypher advancement (new clauses and functions, improved syntax)
 
 
-### How to add a cartridge to Jelastic Cloud?
-TBD
+### How to add a cartridge to Openshift ?
+
+Under openshift console, select the application and click on  the "see the list of cartridges you can add" link at the bottom of the page.
+Scroll down to the "Install your own cartridge" and type the following url:
+
+
+
+https://raw.githubusercontent.com/danielnatali/openshift-neo4j-cartridge/master/metadata/manifest.yml
+
+After a while, you should get your gear with Neo4j!
+
+
+
