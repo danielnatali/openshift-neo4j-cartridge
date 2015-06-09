@@ -8,6 +8,6 @@ for dir in logs tmp pid cache dbs env; do
 done
  
 cd ${OPENSHIFT_NEO4J_DIR}versions/2.1/neo4j-2.1/conf
-grep -rl 'OPENSHIFT_NEO4J_DB_HOST' ./ | xargs sed -i s/OPENSHIFT_NEO4J_DB_HOST/$OPENSHIFT_NEO4J_DB_HOST/g
-grep -rl 'OPENSHIFT_NEO4J_DB_PORT' ./ | xargs sed -i s/OPENSHIFT_NEO4J_DB_PORT/$OPENSHIFT_NEO4J_DB_PORT/g
-grep -rl 'OPENSHIFT_DATA_DIR' ./ | xargs sed -i s/OPENSHIFT_DATA_DIR/$OPENSHIFT_DATA_DIR/g
+grep -rl 'OPENSHIFT_NEO4J_DB_HOST' ./ | xargs sed -i "s/OPENSHIFT_NEO4J_DB_HOST/${OPENSHIFT_NEO4J_DB_HOST}/g"
+grep -rl 'OPENSHIFT_NEO4J_DB_PORT' ./ | xargs sed -i "s/OPENSHIFT_NEO4J_DB_PORT/${OPENSHIFT_NEO4J_DB_PORT}/g"
+grep -rl 'OPENSHIFT_DATA_DIR' ./ | xargs sed -i "s/OPENSHIFT_DATA_DIR/${OPENSHIFT_DATA_DIR}/g"
