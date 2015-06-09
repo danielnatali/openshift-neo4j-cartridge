@@ -8,7 +8,7 @@ FMT="%a %b %d %Y %H:%M:%S GMT%z (%Z)"
 PID=${OPENSHIFT_NEO4J_DIR}versions/2.1/neo4j-2.1/data/neo4j-service.pid
 
 NEO4J_CLI="-host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT"
-
+ 
 function is_running() {
     if [ -f $PID ]; then
         local neo4j_pid=`cat ${OPENSHIFT_NEO4J_DIR}/versions/$Version/neo4j-2.1/data/neo4j-service.pid`;
